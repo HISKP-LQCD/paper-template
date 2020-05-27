@@ -1,0 +1,113 @@
+\documentclass[aps,floatfix,prd,nofootinbib,superscriptaddress,reprint,showpacs,10pt,preprintnumbers,longbibliography]{revtex4-1}
+\usepackage[utf8]{inputenc}
+\usepackage[pdftex]{graphicx}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{siunitx}
+\sisetup{locale = UK}
+\usepackage{amsfonts}
+\usepackage{dsfont}
+\usepackage{array}
+\usepackage{bm}
+\usepackage{mathrsfs}
+\usepackage{pifont}
+\usepackage{multirow}
+\usepackage{upgreek}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[pdftex,
+  pdftitle={Put PDF title here}
+  pdfauthor={Put ODF authors here}
+  bookmarks,
+  colorlinks,
+  linkcolor=myblue,
+  citecolor=mymagenta,
+  menucolor=black,
+  urlcolor=myblue,
+  plainpages=false,
+  pdfpagelabels,
+  hypertexnames=false]{hyperref}
+\usepackage{verbatim}
+\usepackage{slashed}
+\usepackage{cleveref}
+\usepackage{ucs}
+\usepackage{subfigure}
+
+%%%%%%%%%%%%%%%% Maxim's environments for comments %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\cor}[2]{{\color{RubineRed} \st{#1}} {\bf\color{blue} #2}}
+\newcommand{\com}[1]{{\color{RubineRed}\texttt{com}\footnote{\texttt{\color{RubineRed}#1}}}}
+\newcommand{\comm}[1]{{\color{RubineRed}{\texttt{\color{RubineRed}[com:#1]}}}}% use in tab/fig
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\fig}[1]{Figure~\ref{#1}}
+\newcommand{\tab}[1]{Table~\ref{#1}}
+\newcommand{\eq}[1]{Eq.~(\ref{#1})}
+
+\renewcommand{\l}{\left}
+\renewcommand{\r}{\right}
+\newcommand{\gev}{\,\mathrm{GeV}}
+\newcommand{\mev}{\,\mathrm{MeV}}
+\newcommand{\fm}{\,\mathrm{fm}}
+\newcommand{\order}[1]{\mathcal{O}\l({#1}\r)}
+\newcommand{\phys}{\mathrm{phys}}
+\newcommand{\syserr}[1]{(#1)_\mathrm{sys}}
+\newcommand{\staterr}[1]{(#1)_\mathrm{stat}}
+
+\DeclareMathOperator{\im}{i}
+\DeclareMathOperator{\ord}{\mathcal{O}}
+\newcommand{\eto}[1]{\ensuremath{\mathrm{e}^{#1}}}
+\newcommand{\md}{\ensuremath{\mathrm{d}}}
+\newcommand{\ordnung}[1]{\ensuremath{\ord\left(#1\right)}}
+\newcommand{\gm}{Gardner method}
+\newcommand{\Meff}{M_\mathrm{eff}}
+\newcommand{\tMeff}{\tilde{M}_\mathrm{eff}}
+
+\setlength{\parindent}{0cm} % Default is 15pt.
+\setlength{\parskip}{1mm}
+
+
+%Colors for references and links
+\definecolor{mymagenta}{RGB}{200, 0, 100}
+\definecolor{myblue}{RGB}{45, 48, 146}
+
+\graphicspath{{plots/}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\title{Paper Template}
+\author{Martin Müller}
+\affiliation{Helmholtz-Institut f\"ur Strahlen- und Kernphysik, University of Bonn, Nussallee 14-16, 53115 Bonn, Germany}
+\affiliation{Bethe Center for Theoretical Physics, University of Bonn, Nussallee 12, 53115 Bonn, Germany}
+\author{Martina Mustermann}
+\affiliation{Helmholtz-Institut f\"ur Strahlen- und Kernphysik, University of Bonn, Nussallee 14-16, 53115 Bonn, Germany}
+\affiliation{Bethe Center for Theoretical Physics, University of Bonn, Nussallee 12, 53115 Bonn, Germany}
+\date{\today}
+\begin{abstract}
+  abstract \ldots
+\end{abstract}
+
+\maketitle
+
+
+\begin{acknowledgments}
+  The authors gratefully acknowledge the Gauss Centre for Supercomputing
+  e.V. (www.gauss-centre.eu) for funding this project by providing
+  computing time on the GCS Supercomputer JUQUEEN~\cite{juqueen} and the
+  John von Neumann Institute for Computing (NIC) for computing time
+  provided on the supercomputers JURECA~\cite{jureca} and JUWELS~\cite{juwels} at Jülich
+  Supercomputing Centre (JSC).
+  %
+  This project was funded in part by the DFG as a project in the
+  Sino-German CRC110.
+  %
+  The open source software packages tmLQCD~\cite{Jansen:2009xp,Abdel-Rehim:2013wba,Deuzeman:2013xaa}, 
+  Lemon~\cite{Deuzeman:2011wz}, 
+  QUDA~\cite{Clark:2009wm,Babich:2011np,Clark:2016rdz} and R~\cite{R:2019} have 
+  been used.
+\end{acknowledgments}
+
+\bibliography{bibliography}
+
+\end{document}
