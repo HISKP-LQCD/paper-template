@@ -10,7 +10,7 @@ BIBS = $(find . -name '*.bib')
 main.pdf: ${SOURCEFILES} ${FIGURES}
 	latexmk -bibtex -pdf -pdflatex="pdflatex -interaction=nonstopmode" -use-make main.tex
 
-submit: Makefile
+submit: Makefile put-here-only-what-needs-submission
 	mkdir -p submit/plots
 	latexpand --expand-bbl main.bbl main.tex > submit/main.tex
 	cp plots/*.pdf submit/plots/
