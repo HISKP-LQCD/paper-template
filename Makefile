@@ -21,7 +21,7 @@ submit: Makefile
 tidy:
 	$(RM) *.aux
 	$(RM) mainNotes.bib
-	$(RM) main.{out,log,aux,synctex.gz,blg,toc,fls,fdb_latexmk}
+	$(RM) $(addprefix main.,log aux synctex.gz blg toc fls fdb_latexmk)
 	$(RM) *~
 
 .PHONY: clean
