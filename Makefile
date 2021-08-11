@@ -2,12 +2,12 @@ all: main.pdf
 
 ROOT:=$(shell pwd)
 
-SOURCEFILES = $(find . -name '*.tex')
-FIGURES = $(find plots/ -name '*.pdf')
-BIBS = $(find . -name '*.bib')
+SOURCEFILES = $(shell find . -name '*.tex')
+FIGURES = $(shell find plots/ -name '*.pdf')
+BIBS = $(shell find . -name '*.bib')
 
 
-main.pdf: ${SOURCEFILES} ${FIGURES}
+main.pdf: ${SOURCEFILES} ${FIGURES} ${BIBS}
 	latexmk -bibtex -pdf -pdflatex="pdflatex -interaction=nonstopmode" -use-make main.tex
 
 submit: Makefile put-here-only-what-needs-submission
