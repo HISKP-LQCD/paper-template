@@ -15,7 +15,7 @@ submit: Makefile put-here-only-what-needs-submission
 	latexpand --expand-bbl main.bbl main.tex > submit/main.tex
 	cp plots/*.pdf submit/plots/
 	latexmk -pdf -use-make submit/main.tex # compile document to make sure it works, but not within prd directory
-	tar -czf submit.tar.gz submit
+	tar -czf submit.tar.gz -C submit main.tex plots
 
 .PHONY: tidy
 tidy:
